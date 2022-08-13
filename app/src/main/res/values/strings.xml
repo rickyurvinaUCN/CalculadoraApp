@@ -19,4 +19,8 @@
     <string name="multiply">Multiplicar</string>
     <string name="info">Información de la persona</string>
     <string name="description_btn_info">Boton para calcular</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="next_activity">Siguiente Activity</string>
 </resources>

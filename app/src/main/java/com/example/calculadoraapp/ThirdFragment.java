@@ -1,5 +1,6 @@
 package com.example.calculadoraapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,11 +41,18 @@ public class ThirdFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.buttonThird.setOnClickListener(new View.OnClickListener() {
+        binding.btnToFragment2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_thirdFragment_to_SecondFragment);
+            }
+        });
+
+        binding.btnToActivity2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toActivity2();
             }
         });
 
@@ -57,7 +65,7 @@ public class ThirdFragment extends Fragment {
         lv_peopleList1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                txt_info.setText("La edad de " + lv_peopleList1.getItemAtPosition(i) + " es:" + ages[i]+" años");
+                txt_info.setText("La edad de " + lv_peopleList1.getItemAtPosition(i) + " es:" + ages[i] + " años");
             }
         });
     }
@@ -66,6 +74,12 @@ public class ThirdFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    //metodo para cambiar de activity
+    public void toActivity2() {
+        Intent next = new Intent(this.getContext(), MainActivity2.class);
+        startActivity(next);
     }
 
 }
