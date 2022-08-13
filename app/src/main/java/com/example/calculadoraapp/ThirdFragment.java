@@ -77,7 +77,7 @@ public class ThirdFragment extends Fragment {
         binding = null;
     }
 
-    //metodo para cambiar de activity
+    //metodo para cambiar de activity y pasar datos entre los activities
     public void toActivity2() {
         Intent next = new Intent(this.getContext(), MainActivity2.class);
         next.putExtra("info", txt_info.getText().toString());
