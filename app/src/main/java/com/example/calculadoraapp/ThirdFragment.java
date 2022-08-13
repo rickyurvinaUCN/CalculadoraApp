@@ -7,18 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
 import com.example.calculadoraapp.databinding.FragmentThirdBinding;
 
-import org.w3c.dom.Text;
+
 
 public class ThirdFragment extends Fragment {
 
@@ -44,8 +39,6 @@ public class ThirdFragment extends Fragment {
         binding.btnToFragment2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_thirdFragment_to_SecondFragment);
             }
         });
 
