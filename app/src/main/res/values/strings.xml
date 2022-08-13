@@ -2,8 +2,9 @@
     <string name="app_name">CalculadoraApp</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Calculadora Normal</string>
+    <string name="second_fragment_label">Spinner</string>
+    <string name="third_fragment_label">ListView</string>
     <string name="next">Siguiente</string>
     <string name="previous">Previous</string>
 
@@ -17,4 +18,5 @@
     <string name="substract">Restar</string>
     <string name="divide">Dividir</string>
     <string name="multiply">Multiplicar</string>
+    <string name="info">Información de la persona</string>
 </resources>

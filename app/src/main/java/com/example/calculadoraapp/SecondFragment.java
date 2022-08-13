@@ -59,6 +59,14 @@ public class SecondFragment extends Fragment {
             }
         });
 
+        binding.btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_thirdFragment2);
+            }
+        });
+
         binding.btnCalc2.setOnClickListener((View v) -> {
             String selected= sp_operations.getSelectedItem().toString();
             switch (selected){
