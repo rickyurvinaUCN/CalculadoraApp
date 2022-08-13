@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.calculadoraapp.databinding.FragmentFirstBinding;
 
@@ -60,6 +61,13 @@ public class FirstFragment extends Fragment {
 //        });
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+            }
+        });
         binding.btnSumar.setOnClickListener((View v) -> {
             if (chk_sum.isChecked() || chk_sub.isChecked() || chk_mul.isChecked() || chk_div.isChecked()) {
                 String res = "";
