@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    private EditText txt_user, txt_psw;
+    private EditText txt_user, txt_psw, txt_info2;
 
 
     @Override
@@ -19,7 +19,9 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         txt_user = (EditText) findViewById(R.id.txt_user);
         txt_psw = (EditText) findViewById(R.id.txt_psw);
-
+        txt_info2 = (EditText) findViewById(R.id.txt_info2);
+        String infoReceived = getIntent().getStringExtra("info");
+        txt_info2.setText(infoReceived);
     }
 
     @Override

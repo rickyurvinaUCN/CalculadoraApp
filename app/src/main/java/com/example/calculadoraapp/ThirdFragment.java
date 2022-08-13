@@ -66,6 +66,7 @@ public class ThirdFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 txt_info.setText("La edad de " + lv_peopleList1.getItemAtPosition(i) + " es:" + ages[i] + " años");
+
             }
         });
     }
@@ -79,7 +80,9 @@ public class ThirdFragment extends Fragment {
     //metodo para cambiar de activity
     public void toActivity2() {
         Intent next = new Intent(this.getContext(), MainActivity2.class);
+        next.putExtra("info", txt_info.getText().toString());
         startActivity(next);
+
     }
 
 }
