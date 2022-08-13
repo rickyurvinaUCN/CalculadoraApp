@@ -12,6 +12,7 @@
         android:layout_width="244dp"
         android:layout_height="63dp"
         android:layout_marginBottom="36dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/firstValue"
         android:inputType="number"
@@ -19,17 +20,17 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_num2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/txt_num2"
         android:layout_width="244dp"
         android:layout_height="63dp"
-        android:layout_marginBottom="444dp"
+        android:layout_marginBottom="440dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/second_value"
         android:inputType="number"
@@ -37,18 +38,17 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_sumar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="@string/sum"
+        android:layout_marginTop="40dp"
+        android:text="@string/calc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
 
@@ -57,14 +57,49 @@
         android:layout_width="103dp"
         android:layout_height="43dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="44dp"
         android:text="@string/result"
         android:textAlignment="center"
         android:textColor="#039BE5"
+
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toEndOf="@+id/btn_sumar"
         app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <RadioGroup
+        android:id="@+id/rad_group"
+        android:layout_width="238dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_res">
+
+        <RadioButton
+            android:id="@+id/rad_sum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sum" />
+
+        <RadioButton
+            android:id="@+id/rad_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/substract" />
+
+        <RadioButton
+            android:id="@+id/rad_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/divide" />
+
+        <RadioButton
+            android:id="@+id/rad_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multiply" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

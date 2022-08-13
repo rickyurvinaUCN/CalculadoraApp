@@ -13,4 +13,8 @@
     <string name="second_value">Ingrese el segundo valor</string>
     <string name="result">Resultado</string>
     <string name="sum">Sumar</string>
+    <string name="calc">Calcular</string>
+    <string name="substract">Restar</string>
+    <string name="divide">Dividir</string>
+    <string name="multiply">Multiplicar</string>
 </resources>
