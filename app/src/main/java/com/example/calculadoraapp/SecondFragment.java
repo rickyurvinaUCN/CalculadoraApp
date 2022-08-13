@@ -42,7 +42,8 @@ public class SecondFragment extends Fragment {
                         "Multiplicar",
                         "Dividir",
                 };
-        ArrayAdapter <String> adapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.simple_spinner_item, operations);
+//        ArrayAdapter <String> adapter = new ArrayAdapter<>(this.getContext(), android.R.layout.simple_spinner_item, operations);
+        ArrayAdapter <String> adapter = new ArrayAdapter<>(this.getContext(), R.layout.spinner_item, operations);
         sp_operations.setAdapter(adapter);
         return binding.getRoot();
     }
@@ -81,52 +82,41 @@ public class SecondFragment extends Fragment {
         });
     }
 
-    public void showMessage() {
-        Toast.makeText(this.getContext(), "No se ha seleccionado ninguna operación", Toast.LENGTH_SHORT).show();
-    }
-
-    public String sum() {
+    public void sum() {
         double val1 = Integer.parseInt(txt_num3.getText().toString());
         double val2 = Integer.parseInt(txt_num4.getText().toString());
         double sum = val1 + val2;
         String res = String.valueOf(sum);
         txt_res2.setText(res);
-        return res;
     }
 
-    public String sub() {
+    public void sub() {
         double val1 = Integer.parseInt(txt_num3.getText().toString());
         double val2 = Integer.parseInt(txt_num4.getText().toString());
         double sub = val1 - val2;
         String res = String.valueOf(sub);
         txt_res2.setText(res);
-        return res;
-
     }
 
-    public String mul() {
+    public void mul() {
         double val1 = Integer.parseInt(txt_num3.getText().toString());
         double val2 = Integer.parseInt(txt_num4.getText().toString());
         double mul = val1 * val2;
         String res = String.valueOf(mul);
         txt_res2.setText(res);
-        return res;
-
     }
 
-    public String div() {
+    public void div() {
         double val1 = Integer.parseInt(txt_num3.getText().toString());
         double val2 = Integer.parseInt(txt_num4.getText().toString());
         if (val2 != 0) {
             double sum = val1 / val2;
             String res = String.valueOf(sum);
             txt_res2.setText(res);
-            return res;
 
         } else {
             String message = "No es posible dividir para 0";
             Toast.makeText(this.getContext(), message, Toast.LENGTH_SHORT).show();
-            return message;
         }
     }
 
